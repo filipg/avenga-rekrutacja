@@ -13,6 +13,10 @@
         height: auto;
         position: absolute;
         z-index: 1;
+
+        @media (max-width: $break-point-768) {
+            display: none;
+        }
     }
 
     &-two {
@@ -20,6 +24,10 @@
         height: auto;
         position: absolute;
         z-index: 0;
+
+        @media (max-width: $break-point-768) {
+            height: 100%;
+        }
     }
 }
 

@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="header">
+        {{header}}
+    </div>
+    <span class="info" *ngFor="let item of packages">{{item}} </span>
+
+    <div class="packages">
+        <div class="packages-item" *ngFor="let package of packageItems; last as last">
+            <div class="packages-item-logo" [ngStyle]="{'background': getUrl(package.icon)}">
+                <span *ngIf="!last" class="plus"></span>
+            </div>
+            <div class="packages-item-choose">
+                wybierz
+            </div>
+            <div class="packages-item-desc">
+                {{package.description}}
+            </div>
+        </div>
+    </div>
+
+    <div class="buttons-container">
+        <button class="btn-first">
+            stwórz pakiet
+        </button>
+        <a class="btn-secound">lub wybierz pakiet przygotowany przez nas</a>
+    </div>
+</div>

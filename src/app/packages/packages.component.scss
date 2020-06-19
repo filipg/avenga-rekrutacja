@@ -1,0 +1,106 @@
+@import './core/variables';
+
+.container {
+    min-height: 400px;
+    width: 100%;
+    background: $color-purple;
+    color: $color-white;
+    text-transform: uppercase;
+}
+
+.header {
+    font-size: 2.5rem;
+    font-weight: 900;
+    padding: 1rem 1rem 0;
+}
+
+.info {
+    font-size: .9rem;
+    font-weight: 900;
+
+    &:not(:last-of-type):after {
+        content: ' - ';
+    }
+
+    &:first-of-type {
+        padding-left: 1rem;
+    }
+}
+
+.packages {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 1rem;
+    min-height: 10rem;
+    margin-top: 3rem;
+
+    @media (max-width: $break-point-768) {
+        flex-direction: column;        
+    }
+
+    &-item {
+        min-width: 10rem;
+        font-size: .9rem;
+        text-align: center;
+        
+        @media (max-width: $break-point-768) {
+            padding: 1rem;      
+        }
+
+        &-logo {
+            width: 115px;
+            height: 100px;
+            background-size: cover !important;
+            display: inline-block;
+            position: relative;
+        }
+
+        &-choose {
+            font-weight: 300;
+        }
+        
+        &-desc {
+            font-weight: 900;
+        }        
+    }
+}
+
+.plus {
+    position: absolute;
+    right: -5.5rem;
+    top: 3.5rem;
+    background: url('../../assets/icons/plusIcon.png') no-repeat;
+    width: 1.5rem;
+    height: 1.5rem;
+
+    @media (max-width: $break-point-768) {
+        display: none;          
+    }
+}
+
+.buttons-container {
+    text-align: center;
+    padding: 3rem;
+}
+
+.btn-first {
+    display: inline-block;
+    font-size: 1.5rem;
+    width: 70%;
+    padding: 1.2rem;
+    background: $button-color;
+    color: $color-white;
+    outline: none;
+    border: 1px solid $color-white;
+    text-transform: uppercase;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.btn-secound {
+    display: block;
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
