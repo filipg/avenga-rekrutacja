@@ -13,12 +13,14 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { SpecialOfferComponent } from './special-offer/special-offer.component';
+import { VodComponent } from './vod/vod.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainNavComponent,
-    SpecialOfferComponent
+    SpecialOfferComponent,
+    VodComponent
   ],
   imports: [
     BrowserModule,

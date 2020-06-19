@@ -22,6 +22,8 @@
         &-one {
             width: 33%;
             // min-height: 500px;
+            // max-height: 500px;
+            height: 500px;
 
             @media (max-width: $break-point-768) {
                 width: 100%;

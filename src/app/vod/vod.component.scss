@@ -1,0 +1,87 @@
+@import './core/variables';
+
+.container {
+    height: 100%;
+    position: relative;
+}
+
+.img {
+    background: url('../../assets/icons/capitan.png') no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.header-name {
+    font-size: 2rem;
+    text-transform: uppercase;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: $color-white;
+    font-weight: 900;
+}
+
+.header-desc {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: $color-white;
+    font-weight: 900;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background: rgb(0, 0, 0, .3);
+    display: flex;
+    justify-content: space-between;
+}
+
+.movie {
+    padding: 1rem;
+
+    &-title {
+        font-size: 1.5rem;
+        color: $color-white;
+        font-weight: 400;
+    }
+
+    &-category {
+        text-transform: uppercase;
+        font-weight: 900;
+        color: $color-text-primary-green;
+        display: inline-block;
+    }
+
+    &-price {
+        display: inline-block;
+        color: $color-blue;
+        font-weight: 900;
+        margin-left: 1rem;
+    }
+}
+
+.watch {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $color-white;
+    width: 150px;
+    text-align: center;
+    text-transform: uppercase;
+    border-left: 1px solid $color-gray-light;
+
+    &-number {
+        font-size: 1.2rem;
+        font-weight: 900;
+    }
+
+    &-icon {
+        background: url('../../assets/icons/people.png') no-repeat;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
