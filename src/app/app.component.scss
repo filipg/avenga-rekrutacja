@@ -1,0 +1,40 @@
+@import "./core/variables";
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    // height: 1000px;
+    padding: .5rem;
+
+    @media (max-width: $break-point-768) {
+        width: 100%;
+    }
+
+    &-components {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        @media (max-width: $break-point-768) {
+            flex-direction: column;
+        }
+
+        &-one {
+            width: 33%;
+            // min-height: 500px;
+
+            @media (max-width: $break-point-768) {
+                width: 100%;
+            }
+        }
+
+        &-two {
+            width: 66%;
+            height: 500px;
+
+            @media (max-width: $break-point-768) {
+                width: 100%;
+            }
+        }
+    }
+}

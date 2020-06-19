@@ -2,6 +2,7 @@
 
 .sidenav-container {
   height: 100%;
+  background-color: $color-black;
 }
 
 .sidenav {
@@ -11,7 +12,7 @@
 .mat-toolbar.mat-primary {
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 5;
   background: $color-navigation-bar;
   height: 5rem;
 }
@@ -60,7 +61,7 @@
     &::before {
       content: '';
       display: inline-block;
-      background: url('../icons/phone.png') no-repeat;
+      background: url('../../assets/icons/phone.png') no-repeat;
       width: 1rem;
       height: 1rem;
       margin-right: .5rem;
@@ -78,7 +79,7 @@
         color: $color-white;
         margin-right: .5rem;
     
-        background: url('../icons/search.png') no-repeat;
+        background: url('../../assets/icons/search.png') no-repeat;
         padding-left: 1.5rem;
         background-size: 1rem;
   
@@ -94,7 +95,7 @@
     cursor: pointer;
     
     &-icon {
-      background: url('../icons/user.png') no-repeat;
+      background: url('../../assets/icons/user.png') no-repeat;
       padding-left: 1.5rem;
       background-size: .9rem;
     }
