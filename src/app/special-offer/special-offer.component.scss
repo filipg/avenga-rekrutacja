@@ -1,4 +1,5 @@
 @import './core/variables';
+@import './core/mixins/header';
 
 .container {
     width: 100%;
@@ -32,16 +33,13 @@
 }
 
 h1 {
+    @include componentHeader();
     position: absolute;
     top: 2rem;
     left: 2rem;
     z-index: 3;
-    color: $color-white;
-    text-transform: uppercase;
-    font-size: 2rem;
     padding: 0;
     margin: 0;
-    font-weight: 900;
 }
 
 .offer-info {

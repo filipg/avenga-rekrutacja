@@ -1,33 +1,26 @@
 @import './core/variables';
+@import './core/mixins/header';
+@import './core/mixins/displayFlex';
+@import './core/mixins/bgIcon';
 
 .container {
     height: 100%;
-
-    // @media (max-width: $break-point-768) {
-    //     margin-top: 5rem;        
-    //   }
 }
 
 .header {
     &-container {
-        display: flex;
-        justify-content: space-between;
+        @include displayFlex(space-between, stretch, row);
         padding: 1rem 0 1rem 1rem;
         background: $color-text-primary-green;
     }
 
     &-tilte {
-        font-size: 2.5rem;
-        font-weight: 900;
-        color: $color-white;
-        text-transform: uppercase;
+        @include componentHeader();
     }
 
     &-watch {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include displayFlex(center, center, column);
+
         color: $color-white;
         width: 150px;
         text-align: center;
@@ -40,18 +33,12 @@
         }
     
         &-icon {
-            background: url('../../assets/icons/people.png') no-repeat;
-            width: 1.5rem;
-            height: 1.5rem;
+            @include bgIcon('people.png', 1.5rem, 1.5rem);
         }
     }
 }
 
 .movie {
-    background: url('../../assets/icons/nowInTvBig.png') no-repeat;
-    // min-height: 500px;
-    // width: 100%;
-    width: 100%;
-    height: 355px;
+    @include bgIcon('nowInTvBig.png', 100%, 355px);
     background-size: cover;
 }

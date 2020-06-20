@@ -1,0 +1,5 @@
+@mixin bgIcon($url, $width: 25px, $height: 25px) {
+    width: $width;
+    height: $height;
+    background: url('../../assets/icons/' + $url) no-repeat;
+  }

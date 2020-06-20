@@ -1,4 +1,7 @@
 @import './core/variables';
+@import './core/mixins/header';
+@import './core/mixins/displayFlex';
+@import './core/mixins/bgIcon';
 
 .container {
     min-height: 400px;
@@ -9,14 +12,12 @@
 }
 
 .header {
-    font-size: 2.5rem;
-    font-weight: 900;
+    @include componentHeader();
     padding: 1rem 1rem 0;
 }
 
 .info {
-    font-size: .9rem;
-    font-weight: 900;
+    @include componentHeaderSecondary();
 
     &:not(:last-of-type):after {
         content: ' - ';
@@ -28,9 +29,8 @@
 }
 
 .packages {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
+    @include displayFlex(space-between, stretch, row);
+
     padding: 1rem;
     min-height: 10rem;
     margin-top: 1rem;
@@ -70,9 +70,7 @@
     position: absolute;
     right: -5.5rem;
     top: 3.5rem;
-    background: url('../../assets/icons/plusIcon.png') no-repeat;
-    width: 1.5rem;
-    height: 1.5rem;
+    @include bgIcon('plusIcon.png', 1.5rem, 1.5rem);
 
     @media (max-width: $break-point-768) {
         display: none;          

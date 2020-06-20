@@ -1,4 +1,6 @@
 @import './core/variables';
+@import './core/mixins/header';
+@import './core/mixins/displayFlex';
 
 .container {
     height: 100%;
@@ -13,30 +15,23 @@
 }
 
 .header-name {
-    font-size: 2rem;
-    text-transform: uppercase;
+    @include componentHeader();
     position: absolute;
     top: 1rem;
     left: 1rem;
-    color: $color-white;
-    font-weight: 900;
 }
 
 .header-desc {
-    font-size: 1rem;
-    text-transform: uppercase;
-    color: $color-white;
-    font-weight: 900;
+    @include componentHeaderSecondary();
 }
 
 .footer {
+    @include displayFlex(space-between, stretch, row);
     position: absolute;
     bottom: 0;
     right: 0;
     width: 100%;
     background: rgb(0, 0, 0, .3);
-    display: flex;
-    justify-content: space-between;
     padding: 1rem 0;
 }
 
@@ -65,10 +60,7 @@
 }
 
 .watch {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include displayFlex(center, center, column);
     color: $color-white;
     width: 150px;
     text-align: center;

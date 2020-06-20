@@ -1,9 +1,10 @@
 @import './core/variables';
 @import './core/mixins/header';
+@import './core/mixins/displayFlex';
+@import './core/mixins/bgIcon';
 
 .container {
-    display: flex;
-    flex-direction: row;
+    @include displayFlex();
     background: $color-navigation-bar;
     margin-top: 2rem;
 
@@ -15,8 +16,7 @@
 .info {
     &-sales {
         width: 66%;
-        display: flex;
-        flex-direction: column;
+        @include displayFlex(flex-start, stretch, column);
         padding: 1rem;
 
         @media (max-width: $break-point-768) {
@@ -25,9 +25,8 @@
         }
 
         &-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            @include displayFlex(space-between, center, row);
+
 
             &-app {
                 &-name {
@@ -49,9 +48,7 @@
                         &::before {
                             content: '';
                             display: inline-block;
-                            background: url('../../assets/icons/tablet.png') no-repeat;
-                            width: 5rem;
-                            height: 3rem;
+                            @include bgIcon('tablet.png', 5rem, 3rem);
                             position: absolute;
                             left: -5rem;
                             bottom: 0;
@@ -80,17 +77,13 @@
                         &::before {
                             content: '';
                             display: inline-block;
-                            background: url('../../assets/icons/mobileGreen.png') no-repeat;
-                            width: 2rem;
-                            height: 1.7rem;
+                            @include bgIcon('mobileGreen.png', 2rem, 1.7rem);
                           }
 
                           &::after {
                             content: '';
                             display: inline-block;
-                            background: url('../../assets/icons/phoneBig.png') no-repeat;
-                            width: 2rem;
-                            height: 1.7rem;
+                            @include bgIcon('phoneBig.png', 2rem, 1.7rem);
                             position: absolute;
                             left: -2.5rem;
                             bottom: .3rem;
@@ -108,9 +101,8 @@
         }
 
         &-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            @include displayFlex(space-between, center, row);
+
             padding: 2rem 0;
             border-top: 1px solid $color-gray-light;
 
@@ -124,25 +116,19 @@
             }
 
             &-icons {
-                display: flex;
-                justify-content: space-between;
+                @include displayFlex(space-between, stretch, row);
                 width: 120px;
 
-                &-icon {
-                    width: 40px;
-                    height: 40px;
-                }
-
                 &-facebook {
-                    background: url('../../assets/icons/facebook.png') no-repeat;
+                    @include bgIcon('facebook.png', 40px, 40px);
                 }
 
                 &-twitter {
-                    background: url('../../assets/icons/twitter.png') no-repeat;
+                    @include bgIcon('twitter.png', 40px, 40px);
                 }
 
                 &-youtube {
-                    background: url('../../assets/icons/youtube.png') no-repeat;
+                    @include bgIcon('youtube.png', 40px, 40px);                    
                 }
             }
         }
@@ -172,9 +158,7 @@
             &::before {
                 content: '';
                 display: inline-block;
-                background: url('../../assets/icons/phoneBig.png') no-repeat;
-                width: 2rem;
-                height: 1.7rem;
+                @include bgIcon('phoneBig.png', 2rem, 1.7rem);
               }
         }
 

@@ -1,4 +1,7 @@
 @import "./core/variables";
+@import './core/mixins/header';
+@import './core/mixins/displayFlex';
+@import './core/mixins/bgIcon';
 
 .sidenav-container {
   height: 100%;
@@ -18,12 +21,10 @@
 }
 
 .menu {
+  @include displayFlex(center, center, row);
   background: $color-gray-light;
   height: 100%;
   width: 5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   &-btn {
     width: 100%;
@@ -32,9 +33,7 @@
 }
 
 .nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  @include displayFlex(space-between, flex-start, row);
 }
 
 .info {
@@ -61,9 +60,7 @@
     &::before {
       content: '';
       display: inline-block;
-      background: url('../../assets/icons/phone.png') no-repeat;
-      width: 1rem;
-      height: 1rem;
+      @include bgIcon('phone.png', 1rem, 1rem);
       margin-right: .5rem;
     }
   }
