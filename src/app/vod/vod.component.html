@@ -1,14 +1,17 @@
 <div class="container" *ngIf="!loading">
-        <div class="img" [ngStyle]="{'background': getUrl(movie.url)}"></div>
+    <div class="img" [ngStyle]="{'background': getUrl(movie.url)}">
+        <span class="img-arrow-right" (click)="changeContent('up')"></span>
+        <span class="img-arrow-left" (click)="changeContent('down')"></span>
+    </div>
         <div class="header-name">
             vod
             <div class="header-desc">
                 video na żądanie
             </div>
         </div>
-    
+        
         <div class="footer">
-    
+        
             <div class="movie">
                 <div class="movie-title">
                     {{movie.title}} <br> {{movie.subtitle}}
@@ -20,7 +23,7 @@
                     {{movie.price}}
                 </div>
             </div>
-    
+        
             <div class="watch">
                 <div class="watch-desc">
                     film <br> obejrzy
