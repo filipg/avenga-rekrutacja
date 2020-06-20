@@ -1,0 +1,17 @@
+@import './core/variables';
+
+@mixin componentHeader($color: $color-white) {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    font-weight: 900;
+    color: $color;
+    margin: 0;
+    text-transform: uppercase;  
+}
+
+@mixin componentHeaderSecondary($color: white) {
+    font-size: .9rem;
+    color: $color;
+    text-transform: uppercase;
+    font-weight: 900;
+}

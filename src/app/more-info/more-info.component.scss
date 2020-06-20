@@ -1,0 +1,214 @@
+@import './core/variables';
+@import './core/mixins/header';
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    min-height: 350px;
+
+    @media (max-width: $break-point-768) {
+        flex-direction: column;
+    }
+}
+
+.item {
+    width: 33%;
+
+    @media (max-width: $break-point-768) {
+        width: 100%;    
+        min-height: 300px;    
+    }
+
+    &-lte {
+       background: $color-navigation-bar;
+        color: $color-white;
+        padding: 1rem;
+        position: relative;
+
+        @media (max-width: $break-point-768) {
+            padding: 0;   
+        }
+
+        &-header {
+            @include componentHeader($color-text-primary-green);
+
+            &-badge {
+                @include componentHeaderSecondary($color-purple);
+            }
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                padding-left: 1rem; 
+              }
+            
+            li::before {
+                content: "• ";
+                color: $color-text-primary-green;
+                margin-right: .5rem;
+              }
+        }
+
+        &-footer {
+            position: absolute;
+            right: 1rem;
+            bottom: 1rem;
+            font-weight: 900;
+
+            &-name {
+                text-transform: uppercase;
+                color: $color-text-primary-green;
+            }
+
+            &-price {
+                font-size: 3rem;
+                color: $color-purple;
+                
+                &-currency {
+                    font-size: 1rem;
+                    color: $color-purple;
+                }
+            }
+        }
+    }
+
+    &-support {
+        position: relative;
+
+        &-background {
+            background: url('../../assets/icons/supportBackground.png') no-repeat;
+            background-size: cover;
+            min-height: 350px;
+            width: 100%;
+            position: absolute;
+            z-index: -1;
+        }
+
+        &-header {
+            @include componentHeader();
+            padding: 1rem 1rem 0;
+
+            &-badge {
+                @include componentHeaderSecondary($color-text-primary-green);
+                padding-left: 1rem
+            }
+        }
+
+        &-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 1rem;
+
+            @media (max-width: $break-point-768) {
+                padding: 0;   
+            }
+
+            &-icon {
+                background: url('../../assets/icons/face.png') no-repeat;
+                width: 110px;
+                height: 110px;
+                padding: 0 1rem;
+            }
+
+            &-container {
+                display: flex;
+                flex-direction: column;
+
+                &-desc {
+                    @include componentHeaderSecondary();
+                    padding: .5rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &-wrapper {
+                        width: 200px;
+                    }
+
+                    &--one {
+                        background: url('../../assets/icons/arrow.png') no-repeat;
+                        width: 50px;
+                        height: 50px;
+                        cursor: pointer;
+                    }
+
+                    &--two {
+                        background: url('../../assets/icons/messages.png') no-repeat;
+                        width: 50px;
+                        height: 50px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        &-footer {
+            position: absolute;
+            text-align: center;
+            left: 1rem;
+            bottom: 1rem;
+            @include componentHeaderSecondary($color-text-primary-green);
+        }
+    }
+
+    &-app {
+        background: $color-white;
+        padding: 1rem;
+        position: relative;
+
+        @media (max-width: $break-point-768) {
+            padding: 0;   
+        }
+
+        &-header {
+            @include componentHeader($color-purple);
+        }
+
+        &-desc {
+            @include componentHeaderSecondary($color-black);
+            text-transform: capitalize;
+        }
+
+        &-background {
+            background: url('../../assets/icons/appCompBackground.png') no-repeat;
+            width: 320px;
+            height: 200px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        &-icons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 40%;
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+            z-index: 1;
+    
+            &-icon {
+                width: 25px;
+                height: 30px;
+            }
+    
+            &-android {
+                background: url('../../assets/icons/android.png') no-repeat;
+            }
+    
+            &-apple {
+                background: url('../../assets/icons/apple.png') no-repeat;
+            }
+    
+            &-windows {
+                background: url('../../assets/icons/windows.png') no-repeat;
+            }
+        }
+    }
+}

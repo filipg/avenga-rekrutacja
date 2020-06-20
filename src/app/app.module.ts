@@ -16,6 +16,7 @@ import { SpecialOfferComponent } from './special-offer/special-offer.component';
 import { VodComponent } from './vod/vod.component';
 import { PackagesComponent } from './packages/packages.component';
 import { NowInTvComponent } from './now-in-tv/now-in-tv.component';
+import { MoreInfoComponent } from './more-info/more-info.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NowInTvComponent } from './now-in-tv/now-in-tv.component';
     SpecialOfferComponent,
     VodComponent,
     PackagesComponent,
-    NowInTvComponent
+    NowInTvComponent,
+    MoreInfoComponent
   ],
   imports: [
     BrowserModule,
