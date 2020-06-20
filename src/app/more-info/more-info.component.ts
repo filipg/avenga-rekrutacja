@@ -12,4 +12,12 @@ export class MoreInfoComponent implements OnInit {
   ngOnInit() {
   }
 
+  clickOnArrow() {
+    console.log('click on arrow');
+  }
+
+  clickOnMessages() {
+    console.log('click on messages');
+  }
+
 }

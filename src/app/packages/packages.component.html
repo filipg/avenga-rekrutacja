@@ -1,11 +1,11 @@
-<div class="container">
+<div class="container" *ngIf="!loading">
     <div class="header">
-        {{header}}
+        {{packages.header}}
     </div>
-    <span class="info" *ngFor="let item of packages">{{item}} </span>
+    <span class="info" *ngFor="let item of packages.packages">{{item}} </span>
 
     <div class="packages">
-        <div class="packages-item" *ngFor="let package of packageItems; last as last">
+        <div class="packages-item" *ngFor="let package of packages.packageItems; last as last">
             <div class="packages-item-logo" [ngStyle]="{'background': getUrl(package.icon)}">
                 <span *ngIf="!last" class="plus"></span>
             </div>
@@ -19,9 +19,9 @@
     </div>
 
     <div class="buttons-container">
-        <button class="btn-first">
+        <button class="btn-first" (click)="createCustomPackage()">
             stwórz pakiet
         </button>
-        <a class="btn-secound">lub wybierz pakiet przygotowany przez nas</a>
+        <a class="btn-secound" (click)="createOurPackage()">lub wybierz pakiet przygotowany przez nas</a>
     </div>
 </div>
