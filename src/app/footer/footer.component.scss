@@ -1,0 +1,193 @@
+@import './core/variables';
+@import './core/mixins/header';
+
+.container {
+    display: flex;
+    flex-direction: row;
+    background: $color-navigation-bar;
+    margin-top: 2rem;
+
+    @media (max-width: $break-point-768) {
+        flex-direction: column;   
+    }
+}
+
+.info {
+    &-sales {
+        width: 66%;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+
+        @media (max-width: $break-point-768) {
+            width: 100%;
+            padding: 0;  
+        }
+
+        &-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &-app {
+                &-name {
+                    @include componentHeaderSecondary();
+                }
+
+                &-ad {
+                    padding-left: 5rem;
+
+                    &-small {
+                        @include componentHeaderSecondary($color-purple);
+                        margin-bottom: 0;
+                    }
+
+                    &-big {
+                        @include componentHeader($color-purple);
+                        position: relative;
+
+                        &::before {
+                            content: '';
+                            display: inline-block;
+                            background: url('../../assets/icons/tablet.png') no-repeat;
+                            width: 5rem;
+                            height: 3rem;
+                            position: absolute;
+                            left: -5rem;
+                            bottom: 0;
+                          }
+                    }
+                }
+            }
+
+            &-contact {
+
+                text-align: right;
+
+                &-helpline {
+                    @include componentHeaderSecondary();
+
+                    &-option {
+                        @include componentHeaderSecondary($color-text-primary-green);
+                        margin-bottom: 0;
+
+                    }
+
+                    &-number {
+                        @include componentHeader($color-text-primary-green);
+                        position: relative;
+
+                        &::before {
+                            content: '';
+                            display: inline-block;
+                            background: url('../../assets/icons/mobileGreen.png') no-repeat;
+                            width: 2rem;
+                            height: 1.7rem;
+                          }
+
+                          &::after {
+                            content: '';
+                            display: inline-block;
+                            background: url('../../assets/icons/phoneBig.png') no-repeat;
+                            width: 2rem;
+                            height: 1.7rem;
+                            position: absolute;
+                            left: -2.5rem;
+                            bottom: .3rem;
+                          }
+                    }
+
+                    &-aware {
+                        @include componentHeaderSecondary();
+                        font-size: .7rem;
+                        text-transform: lowercase;
+                    }
+                }
+
+            }
+        }
+
+        &-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 0;
+            border-top: 1px solid $color-gray-light;
+
+            &-buttons {
+                @include componentHeaderSecondary();
+
+                a {
+                    padding: 0 1rem;
+                    cursor: pointer;
+                }
+            }
+
+            &-icons {
+                display: flex;
+                justify-content: space-between;
+                width: 120px;
+
+                &-icon {
+                    width: 40px;
+                    height: 40px;
+                }
+
+                &-facebook {
+                    background: url('../../assets/icons/facebook.png') no-repeat;
+                }
+
+                &-twitter {
+                    background: url('../../assets/icons/twitter.png') no-repeat;
+                }
+
+                &-youtube {
+                    background: url('../../assets/icons/youtube.png') no-repeat;
+                }
+            }
+        }
+    }
+
+    &-clients {
+        width: 33%;
+        padding: 1rem;
+        text-align: right;
+
+        @media (max-width: $break-point-768) {
+            width: 100%;    
+            padding: 0;   
+        }
+
+        &-header {
+            @include componentHeaderSecondary();
+        }
+
+        &-call {
+            @include componentHeaderSecondary($color-text-primary-green);
+        }
+
+        &-number {
+            @include componentHeader($color-text-primary-green);
+
+            &::before {
+                content: '';
+                display: inline-block;
+                background: url('../../assets/icons/phoneBig.png') no-repeat;
+                width: 2rem;
+                height: 1.7rem;
+              }
+        }
+
+        &-mobile-phone {
+            @include componentHeaderSecondary();
+
+            &-number {
+                @include componentHeaderSecondary($color-text-primary-green);
+            }
+        }
+
+        &-aware {
+            @include componentHeaderSecondary();
+        }
+    }
+}

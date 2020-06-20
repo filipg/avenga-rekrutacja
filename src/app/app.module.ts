@@ -17,6 +17,7 @@ import { VodComponent } from './vod/vod.component';
 import { PackagesComponent } from './packages/packages.component';
 import { NowInTvComponent } from './now-in-tv/now-in-tv.component';
 import { MoreInfoComponent } from './more-info/more-info.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { MoreInfoComponent } from './more-info/more-info.component';
     VodComponent,
     PackagesComponent,
     NowInTvComponent,
-    MoreInfoComponent
+    MoreInfoComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
