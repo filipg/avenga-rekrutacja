@@ -40,3 +40,11 @@
         }
     }
 }
+
+.move-down-on-mobile {
+    margin-top: 0;
+
+    @media (max-width: $break-point-768) {
+        margin-top: 600px;
+    } 
+}

@@ -15,6 +15,7 @@ import { MatListModule } from '@angular/material/list';
 import { SpecialOfferComponent } from './special-offer/special-offer.component';
 import { VodComponent } from './vod/vod.component';
 import { PackagesComponent } from './packages/packages.component';
+import { NowInTvComponent } from './now-in-tv/now-in-tv.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PackagesComponent } from './packages/packages.component';
     MainNavComponent,
     SpecialOfferComponent,
     VodComponent,
-    PackagesComponent
+    PackagesComponent,
+    NowInTvComponent
   ],
   imports: [
     BrowserModule,

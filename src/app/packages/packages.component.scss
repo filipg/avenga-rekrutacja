@@ -33,7 +33,7 @@
     flex-direction: row;
     padding: 1rem;
     min-height: 10rem;
-    margin-top: 3rem;
+    margin-top: 1rem;
 
     @media (max-width: $break-point-768) {
         flex-direction: column;        
@@ -81,7 +81,7 @@
 
 .buttons-container {
     text-align: center;
-    padding: 3rem;
+    padding: 2rem;
 }
 
 .btn-first {

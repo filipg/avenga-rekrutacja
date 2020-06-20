@@ -1,0 +1,57 @@
+@import './core/variables';
+
+.container {
+    height: 100%;
+
+    // @media (max-width: $break-point-768) {
+    //     margin-top: 5rem;        
+    //   }
+}
+
+.header {
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 0 1rem 1rem;
+        background: $color-text-primary-green;
+    }
+
+    &-tilte {
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: $color-white;
+        text-transform: uppercase;
+    }
+
+    &-watch {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $color-white;
+        width: 150px;
+        text-align: center;
+        text-transform: uppercase;
+        border-left: 1px solid $color-gray-light;
+    
+        &-number {
+            font-size: 1.2rem;
+            font-weight: 900;
+        }
+    
+        &-icon {
+            background: url('../../assets/icons/people.png') no-repeat;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+}
+
+.movie {
+    background: url('../../assets/icons/nowInTvBig.png') no-repeat;
+    // min-height: 500px;
+    // width: 100%;
+    width: 100%;
+    height: 355px;
+    background-size: cover;
+}
