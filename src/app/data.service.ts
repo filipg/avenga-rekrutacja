@@ -1,14 +1,16 @@
 import { Injectable } from '@angular/core';
 import { PackagesResponse } from './interfaces/packages';
-import { of, Observable } from 'rxjs';
+import { of, Observable, interval } from 'rxjs';
 import { Movie } from './interfaces/movie';
+import { InTv } from './interfaces/tv';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
-  packages: PackagesResponse = {
+  private packages: PackagesResponse = {
     header: 'Stwórz swój własny pakiet',
     packages: ['telewizja', 'internet', 'telefon'],
     packageItems: [
@@ -32,7 +34,7 @@ export class DataService {
   };
 
 
-  movies: Movie[] = [
+  private movies: Movie[] = [
     {
       title: 'Kapitan Amerika:',
       subtitle: 'Zimowy żołnierz',
@@ -59,6 +61,26 @@ export class DataService {
     },
   ];
 
+  source = interval(5000);
+
+  private tv: InTv[] = [
+    {
+      title: 'Anatomia magii',
+      chanel: 'discovery chanel',
+      url: 'nowInTvBig.png'
+    },
+    {
+      title: 'Kapitan Amerika',
+      chanel: 'Polsat film',
+      url: 'capitan.png'
+    },
+    {
+      title: 'Władca Pierścieni',
+      chanel: 'HBO',
+      url: 'specialOfferLayerTwo.png'
+    }
+  ];
+
   getPackages(): Observable<PackagesResponse> {
     // fake http request - of returns observable
     return of(this.packages);
@@ -67,5 +89,15 @@ export class DataService {
   getMovies(): Observable<Movie[]> {
     // fake http request - of returns observable
     return of(this.movies);
+  }
+
+  getWhatInTv(): Observable<InTv[]> {
+    // fake http request - of returns observable
+    return of(this.tv);
+  }
+
+  getNumberOfWatching() {
+    // fake http request - of returns observable ---> return number of people currently watching tv
+     return this.source.pipe(map(el => Math.floor(Math.random() * (1000 - 50)) + 50));
   }
 }

@@ -2,6 +2,7 @@
 @import './core/mixins/header';
 @import './core/mixins/displayFlex';
 @import './core/mixins/bgIcon';
+@import './core/mixins/arrowPosition';
 
 .container {
     height: 100%;
@@ -16,20 +17,14 @@
 
     &-arrow-right {
         @include bgIcon('arrowRightBig.png', 30px, 50px);
-        position: absolute;
+        @include arrowPosition();
         right: 1rem;
-        top: 50%;
-        transform: translateY(-50%);
-        cursor: pointer;
     }
 
     &-arrow-left {
         @include bgIcon('arrowLeftBig.png', 30px, 50px);
-        position: absolute;
+        @include arrowPosition();
         left: 1rem;
-        top: 50%;
-        transform: translateY(-50%);
-        cursor: pointer;
     }
 }
 
@@ -50,7 +45,7 @@
     bottom: 0;
     right: 0;
     width: 100%;
-    background: rgb(0, 0, 0, .3);
+    background: $background-opacity;
     padding: 1rem 0;
 }
 

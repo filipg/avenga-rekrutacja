@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="!loading">
     <div class="header-container">
         <div class="header-tilte">
             teraz <br> w tv online
@@ -8,11 +8,19 @@
                     teraz <br> ogląda
                 </div>
                 <div class="header-watch-number">
-                    258
+                    {{nowWatching}}
                 </div>
                 <span class="header-watch-icon"></span>
             </div>
     </div>
 
-    <div class="movie"></div>
+    <div class="movie" [ngStyle]="{'background': getUrl(movie.url)}">
+        <div class="movie-desc">
+            <p class="movie-desc-title">{{movie.title}}</p>
+            <p class="movie-desc-chanel">{{movie.chanel}}</p>
+        </div>
+
+        <span class="movie-arrow-right" (click)="changeContent('up')"></span>
+        <span class="movie-arrow-left" (click)="changeContent('down')"></span>
+    </div>
 </div>

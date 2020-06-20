@@ -36,7 +36,7 @@ export class VodComponent implements OnInit, OnDestroy {
   private startInterval() {
     this.sliderInterval = setInterval(() => {
       this.changeContent('up');
-    }, 3500);
+    }, 4500);
   }
 
   getUrl(icon: string) {
