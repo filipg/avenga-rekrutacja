@@ -94,6 +94,12 @@
     text-transform: uppercase;
     font-weight: 900;
     cursor: pointer;
+
+    &:hover {
+        color: $button-color;
+        background: $color-white;
+        border: 1px solid $button-color;
+    }
 }
 
 .btn-secound {

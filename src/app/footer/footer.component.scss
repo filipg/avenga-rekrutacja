@@ -21,14 +21,23 @@
 
         @media (max-width: $break-point-768) {
             width: 100%;
-            padding: 0;  
+            padding: 0;
+            flex-direction: column-reverse; 
         }
 
         &-header {
             @include displayFlex(space-between, center, row);
 
+            @media (max-width: $break-point-768) {
+                flex-direction: column; 
+            }
 
             &-app {
+
+                @media (max-width: $break-point-768) {
+                    padding: 2.5rem 0;
+                }
+
                 &-name {
                     @include componentHeaderSecondary();
                 }
@@ -103,6 +112,10 @@
         &-footer {
             @include displayFlex(space-between, center, row);
 
+            @media (max-width: $break-point-768) {
+                justify-content: center;
+            }
+
             padding: 2rem 0;
             border-top: 1px solid $color-gray-light;
 
@@ -112,12 +125,21 @@
                 a {
                     padding: 0 1rem;
                     cursor: pointer;
+
+                    @media (max-width: $break-point-768) {
+                        padding: 0 .5rem;
+                    }
                 }
             }
 
             &-icons {
                 @include displayFlex(space-between, stretch, row);
                 width: 120px;
+
+
+                @media (max-width: $break-point-768) {
+                    display: none;
+                }
 
                 &-facebook {
                     @include bgIcon('facebook.png', 40px, 40px);

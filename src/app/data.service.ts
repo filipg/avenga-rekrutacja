@@ -44,16 +44,15 @@ export class DataService {
       url: 'capitan.png'
     },
     {
-      title: 'Władca Pierścieni:',
-      subtitle: 'Powrót króla',
-      category: ['klasyka', 'przygodowy'],
+      title: 'Igrzyska śmierci:',
+      subtitle: 'W pierścieniu ognia',
+      category: ['przygodowy'],
       price: '10,00 zł',
       numberWatched: 728,
       url: 'specialOfferLayerTwo.png'
     },
     {
-      title: 'Hobbit:',
-      subtitle: 'Bitwa Pięciu Armii',
+      title: 'Anatomia magii',
       category: ['nowość', 'akcja', 'przygoda'],
       price: '24,00 zł',
       numberWatched: 250,
@@ -75,7 +74,7 @@ export class DataService {
       url: 'capitan.png'
     },
     {
-      title: 'Władca Pierścieni',
+      title: 'Igrzyska śmierci',
       chanel: 'HBO',
       url: 'specialOfferLayerTwo.png'
     }
