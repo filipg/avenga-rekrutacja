@@ -33,7 +33,6 @@
             }
 
             &-app {
-
                 @media (max-width: $break-point-768) {
                     padding: 2.5rem 0;
                 }
@@ -111,13 +110,12 @@
 
         &-footer {
             @include displayFlex(space-between, center, row);
+            padding: 2rem 0;
+            border-top: 1px solid $color-gray-light;
 
             @media (max-width: $break-point-768) {
                 justify-content: center;
             }
-
-            padding: 2rem 0;
-            border-top: 1px solid $color-gray-light;
 
             &-buttons {
                 @include componentHeaderSecondary();
@@ -134,8 +132,7 @@
 
             &-icons {
                 @include displayFlex(space-between, stretch, row);
-                width: 120px;
-
+                width: 7.5rem;
 
                 @media (max-width: $break-point-768) {
                     display: none;
@@ -160,18 +157,15 @@
         width: 33%;
         padding: 1rem;
         text-align: right;
+        @include componentHeaderSecondary();
 
         @media (max-width: $break-point-768) {
             width: 100%;    
             padding: 0;   
         }
 
-        &-header {
-            @include componentHeaderSecondary();
-        }
-
         &-call {
-            @include componentHeaderSecondary($color-text-primary-green);
+            color: $color-text-primary-green;
         }
 
         &-number {
@@ -184,16 +178,11 @@
               }
         }
 
-        &-mobile-phone {
-            @include componentHeaderSecondary();
-
-            &-number {
-                @include componentHeaderSecondary($color-text-primary-green);
-            }
+        &-mobile-phone-number {
+            color: $color-text-primary-green;
         }
 
         &-aware {
-            @include componentHeaderSecondary();
             font-size: .7rem;
             text-transform: lowercase;
         }

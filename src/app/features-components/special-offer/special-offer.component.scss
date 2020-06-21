@@ -1,9 +1,9 @@
 @import './core/variables';
 @import './core/mixins/header';
 @import './core/mixins/bgIcon';
+@import './core/mixins/displayFlex';
 
 .container {
-    width: 100%;
     height: 100%;
     position: relative;
     overflow: hidden;
@@ -40,7 +40,6 @@ h1 {
     left: 2rem;
     z-index: 3;
     padding: 0;
-    margin: 0;
 }
 
 .offer-info {
@@ -59,13 +58,11 @@ h1 {
         width: 150px;
 
         &-border {
+            @include displayFlex(center, center, row);
             width: 52px;
             height: 52px;
             border: 1px solid $color-white;
             border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
 
         &-mouse {
@@ -112,15 +109,10 @@ h1 {
         font-weight: 900;
         color: $color-pink;
 
-
         &-currency {
             font-size: 2rem;
         }
     }
-
-    // @media (max-width: $break-point-768) {
-    //     top: 20rem;
-    // }
 }
 
 .dots-icon {

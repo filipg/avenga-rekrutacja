@@ -4,10 +4,9 @@
 @import './core/mixins/bgIcon';
 
 .container {
-
   @include displayFlex(space-between, stretch, row);
     
-    min-height: 350px;
+    min-height: 21.875rem;
 
     @media (max-width: $break-point-768) {
         flex-direction: column;
@@ -19,11 +18,11 @@
 
     @media (max-width: $break-point-768) {
         width: 100%;    
-        min-height: 300px;    
+        min-height: 18.75rem;    
     }
 
     &-lte {
-       background: $color-navigation-bar;
+        background: $color-navigation-bar;
         color: $color-white;
         padding: 1rem;
         position: relative;
@@ -57,15 +56,10 @@
         }
 
         &-footer {
+            @include componentHeaderSecondary($color-text-primary-green);
             position: absolute;
             right: 1rem;
             bottom: 1rem;
-            font-weight: 900;
-
-            &-name {
-                text-transform: uppercase;
-                color: $color-text-primary-green;
-            }
 
             &-price {
                 font-size: 3rem;
@@ -113,19 +107,15 @@
             }
 
             &-container {
-
                 @include displayFlex(flex-start, stretch, column);
-
 
                 &-desc {
                     @include componentHeaderSecondary();
+                    @include displayFlex(center, center, row);
                     padding: .5rem;
 
-                     @include displayFlex(center, center, row);
-
-
                     &-wrapper {
-                        width: 200px;
+                        width: 12.5rem;
                     }
 
                     &--one {
@@ -142,11 +132,11 @@
         }
 
         &-footer {
+            @include componentHeaderSecondary($color-text-primary-green);
             position: absolute;
             text-align: center;
             left: 1rem;
             bottom: 1rem;
-            @include componentHeaderSecondary($color-text-primary-green);
         }
     }
 

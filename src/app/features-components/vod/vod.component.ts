@@ -39,11 +39,11 @@ export class VodComponent implements OnInit, OnDestroy {
     }, 4500);
   }
 
-  getUrl(icon: string) {
+  getUrl(icon: string): string {
     return `url('../../assets/icons/${icon}') no-repeat`;
   }
 
-  changeContent(option) {
+  changeContent(option: string) {
     clearInterval(this.sliderInterval);
     this.startInterval();
 

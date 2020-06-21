@@ -28,7 +28,6 @@ export class NowInTvComponent implements OnInit, OnDestroy {
 
   getInTv() {
     this.subscribtionMovies = this.dataService.getWhatInTv().subscribe(data => {
-      console.log('aaa');
       this.movie = data[0];
       this.movies = data;
       this.loading = false;
@@ -39,7 +38,7 @@ export class NowInTvComponent implements OnInit, OnDestroy {
     this.subscriptionNumberOfWatching = this.dataService.getNumberOfWatching().subscribe(data => this.nowWatching = data);
   }
 
-  getUrl(icon: string) {
+  getUrl(icon: string): string {
     return `url('../../../assets/icons/${icon}') no-repeat`;
   }
 

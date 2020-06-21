@@ -29,7 +29,7 @@ export class PackagesComponent implements OnInit, OnDestroy {
     });
   }
 
-  getUrl(icon: string) {
+  getUrl(icon: string): string {
     return `url('../../../assets/icons/${icon}') no-repeat`;
   }
 

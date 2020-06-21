@@ -18,7 +18,7 @@
 
         &-one {
             width: 33%;
-            height: 500px;
+            height: 31.25rem;
 
             @media (max-width: $break-point-768) {
                 width: 100%;
@@ -27,7 +27,7 @@
 
         &-two {
             width: 67%;
-            height: 500px;
+            height: 31.25rem;
 
             @media (max-width: $break-point-768) {
                 width: 100%;
@@ -40,6 +40,6 @@
     margin-top: 0;
 
     @media (max-width: $break-point-768) {
-        margin-top: 600px;
+        margin-top: 37.5rem;
     } 
 }
