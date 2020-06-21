@@ -58,6 +58,11 @@ export class NowInTvComponent implements OnInit, OnDestroy {
     }
   }
 
+  play() {
+    // user clicked on play icon
+    console.log('play icon');
+  }
+
   ngOnDestroy() {
     this.subscribtionMovies.unsubscribe();
     this.subscriptionNumberOfWatching.unsubscribe();

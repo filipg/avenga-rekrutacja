@@ -1,5 +1,6 @@
 @import './core/variables';
 @import './core/mixins/header';
+@import './core/mixins/bgIcon';
 
 .container {
     width: 100%;
@@ -51,6 +52,35 @@ h1 {
     text-transform: uppercase;
     font-weight: 700;
 
+    &-icons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 150px;
+
+        &-border {
+            width: 52px;
+            height: 52px;
+            border: 1px solid $color-white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-mouse {
+            @include bgIcon('mouseSmall.png', 16px, 31px);
+        }
+
+        &-plus {
+            @include bgIcon('plusSmall.png', 15px, 15px);
+        }
+
+        &-gift {
+            @include bgIcon('giftSmall.png', 24px, 26px);
+        }
+    }
+
     &-header {
         font-size: 2.5rem;
     }
@@ -88,7 +118,15 @@ h1 {
         }
     }
 
-    @media (max-width: $break-point-768) {
-        top: 20rem;
-    }
+    // @media (max-width: $break-point-768) {
+    //     top: 20rem;
+    // }
+}
+
+.dots-icon {
+    @include bgIcon('dots.png', 30px, 30px);
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+    z-index: 3;
 }

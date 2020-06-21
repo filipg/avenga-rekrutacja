@@ -77,4 +77,13 @@
         @include arrowPosition();
         left: 1rem;
     }
+
+    &-play-icon {
+        @include bgIcon('play.png', 35px, 35px);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+    }
 }
