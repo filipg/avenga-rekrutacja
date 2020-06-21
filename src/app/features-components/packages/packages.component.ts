@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { DataService } from '../data.service';
-import { PackagesResponse } from '../interfaces/packages';
+import { DataService } from 'src/app/services/data.service';
+import { PackagesResponse } from '../../interfaces/packages';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -30,7 +30,7 @@ export class PackagesComponent implements OnInit, OnDestroy {
   }
 
   getUrl(icon: string) {
-    return `url('../../assets/icons/${icon}') no-repeat`;
+    return `url('../../../assets/icons/${icon}') no-repeat`;
   }
 
   createCustomPackage() {

@@ -194,6 +194,8 @@
 
         &-aware {
             @include componentHeaderSecondary();
+            font-size: .7rem;
+            text-transform: lowercase;
         }
     }
 }

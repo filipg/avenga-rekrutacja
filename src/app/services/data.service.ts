@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { PackagesResponse } from './interfaces/packages';
 import { of, Observable, interval } from 'rxjs';
-import { Movie } from './interfaces/movie';
-import { InTv } from './interfaces/tv';
 import { map } from 'rxjs/operators';
+import { PackagesResponse } from '../interfaces/packages';
+import { Movie } from '../interfaces/movie';
+import { InTv } from '../interfaces/tv';
 
 @Injectable({
   providedIn: 'root'

@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { DataService } from '../data.service';
-import { InTv } from '../interfaces/tv';
+import { DataService } from 'src/app/services/data.service';
+import { InTv } from '../../interfaces/tv';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -40,7 +40,7 @@ export class NowInTvComponent implements OnInit, OnDestroy {
   }
 
   getUrl(icon: string) {
-    return `url('../../assets/icons/${icon}') no-repeat`;
+    return `url('../../../assets/icons/${icon}') no-repeat`;
   }
 
   changeContent(option) {
