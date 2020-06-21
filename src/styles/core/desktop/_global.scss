@@ -7,9 +7,9 @@ html, body {
     font-size: 16px;
     box-sizing: border-box;
 
-    // @media (max-width: $break-point-768) {
-    //     font-size: 14px;
-    // }
+    @media (max-width: $break-point-768) {
+        font-size: 14px;
+    }
 }
 
 body { 
